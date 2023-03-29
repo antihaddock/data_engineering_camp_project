@@ -15,7 +15,7 @@ with source_data as (
     change_type,
     count(change_type) as total 
     from
-    healthcare_payments_raw.ingest
+    {{source('raw','ingest')}}
     group by change_type
     limit 100
 )

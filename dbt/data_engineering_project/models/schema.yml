@@ -2,20 +2,11 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+  - name: data_cleaning
+    description: applying transformations to data to make this dataset clean and useable
+  
+  - name: funding_by_entity
+   description: A table which groups and sums funding amounts by the teaching hospital the research is completed at
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
+ - name: Principal_investigator_speciality
+   description: A table which groups and sums funding amounts by the speciality of the researcher.

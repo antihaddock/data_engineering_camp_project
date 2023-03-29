@@ -7,9 +7,11 @@ Readme file for the data engineering camp!
 
 
 **The dataset**
+This project utilises the research payments data subset of the CMS Open Payments Dataset 2013 from Kaggle. https://www.kaggle.com/datasets/cms/cms-open-payments-dataset-2013 . From kaggle this dataset is described as:
 
-TBC
+***"Open Payments is a national disclosure program created by the Affordable Care Act (ACA) and managed by Centers for Medicare & Medicaid Services (CMS). The purpose of the program is to promote transparency into the financial relationships between pharmaceutical and medical device industries, and physicians and teaching hospitals. The financial relationships may include consulting fees, research grants, travel reimbursements, and payments from industry to medical practitioners. "***
 
+I have used the research subset as this is a large dataset both in terms of the numbers of rows and columns and should require use of multiple tools explored during this course.
 
 ## The Project
 

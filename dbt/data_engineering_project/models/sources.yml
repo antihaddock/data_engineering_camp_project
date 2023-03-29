@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: datazoomcap2023  
+    schema: healthcare_payments_raw
+    tables:
+      - name: ingest
+      
+
+  
