@@ -41,7 +41,7 @@ resource "google_storage_bucket" "data-lake-bucket" {
   force_destroy = true
 }
 
-# Setting up a BigQuery Dataset
+# Setting up a BigQuery Datasets
 # Ref: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/bigquery_dataset
 #setup the raw dataset
 resource "google_bigquery_dataset" "dataset_1" {

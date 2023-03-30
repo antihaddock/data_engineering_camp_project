@@ -13,6 +13,14 @@ This project utilises the research payments data subset of the CMS Open Payments
 
 I have used the research subset as this is a large dataset both in terms of the numbers of rows and columns and should require use of multiple tools explored during this course.
 
+**Aim of the problem**
+
+I will aim to answer the two following questions from this dataset:
+1. Which teaching hospitals recieve the most funding
+2. Which specialities recieve the most funding
+3. What is the amount of funding provided across the calendar year(do some months get more funding then others?)
+
+
 ## The Project
 
 This project aims to:

@@ -14,7 +14,7 @@ variable "region" {
 }
 
 variable "storage_class" {
-  description = "Storage class type for your bucket. Check official docs for more info."
+  description = "Our data lake bucket Prefect will store data in"
   default = "STANDARD"
 }
 
@@ -25,7 +25,7 @@ variable "BQ_DATASET_1" {
 }
 
 variable "BQ_DATASET_2" {
-  description = "BigQuery Dataset that raw data (from GCS) will be written to"
+  description = "BigQuery Dataset that will be the transformed layer of the data warehouse. Will ingest from the raw layer"
   type = string
   default = "healthcare_payments_transformed"
 }

@@ -34,7 +34,6 @@ def write_bq(df: pd.DataFrame) -> None:
     )
     
 
-
 @flow()
 def etl_gcs_to_bq() -> None:
     """Main ETL flow to load data into Big Query"""
