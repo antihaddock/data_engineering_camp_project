@@ -46,7 +46,25 @@ Tools used to do this are:
 
 
 ## BigQuery Data Warehouse optimisation and layout
-I am  apply the a multi layer data warehouse architecture, this would normally take the form of a 3 layer architecture (``raw``, ``transformed``, ``reporting``)
-but for the purpose of this task a 3rd layer is superfluous.
+I am  apply the a multi layer data warehouse architecture, this would normally take the form of a 3 layer architecture (``raw``, ``transformed``, ``reporting``) but for the purpose of this task a 3rd layer is superfluous.
 
 We apply optimisation in the form of partitioning and clustering in  healthcare_payments_transformed. This is done inside dbt config file ``dbt_project.yml``
+
+## How to reproduce this output ##
+
+You will need to have a GCP account, gcloud cli installed and your credentials stored localling are a environmental variable. Installing ``gcloud`` cli can be achieved following these instructions https://cloud.google.com/sdk/docs/install
+
+To connect dbt to your BigQuery instance you will need to run 
+``gcloud auth application-default login   --scopes=https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/iam.test`` to connect dbt.
+
+
+Cloning this repo locally and complete the following steps in order:
+1. Run ``GCP_infastructure.tf``
+2. Go to https://www.kaggle.com/datasets/cms/cms-open-payments-dataset-2013 and save and unzip the data file into the ``./data/`` directory.
+3. Run ``ingest_to_gcs_bucket.py``
+4. Run ``ingest_to_data_bigquery.py``
+5. move to the ``./dbt/data_engineering_project`` directory in the command line
+6. Run ``dbt run``
+
+Your datasets will now be ingested into a Google bucket, and big query.
+
