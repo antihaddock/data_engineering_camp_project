@@ -1,5 +1,3 @@
-Readme file for the data engineering camp!
-
 # DataTalks.Club Data Engineering Camp Project
 
 
@@ -50,7 +48,7 @@ I am  apply the a multi layer data warehouse architecture, this would normally t
 
 We apply optimisation in the form of partitioning and clustering in  healthcare_payments_transformed. This is done inside dbt config file ``dbt_project.yml``
 
-## How to reproduce this output ##
+## How to reproduce this Project ##
 
 You will need to have a GCP account, gcloud cli installed and your credentials stored localling are a environmental variable. Installing ``gcloud`` cli can be achieved following these instructions https://cloud.google.com/sdk/docs/install
 
@@ -61,10 +59,11 @@ To connect dbt to your BigQuery instance you will need to run
 Cloning this repo locally and complete the following steps in order:
 1. Run ``GCP_infastructure.tf``
 2. Go to https://www.kaggle.com/datasets/cms/cms-open-payments-dataset-2013 and save and unzip the data file into the ``./data/`` directory.
-3. Run ``ingest_to_gcs_bucket.py``
-4. Run ``ingest_to_data_bigquery.py``
-5. move to the ``./dbt/data_engineering_project`` directory in the command line
-6. Run ``dbt run``
+3. You will need to run ``prefect orion start`` locally and enter in your gcs credentials as a credentials block in Prefect for the flows to run.
+4. Run in a new terminal window (with the window from step 3 still open) ``ingest_to_gcs_bucket.py``
+5. Run ``ingest_to_data_bigquery.py``
+6. move to the ``./dbt/data_engineering_project`` directory in the command line
+7. Run ``dbt run``
 
 Your datasets will now be ingested into a Google bucket, and big query.
 
