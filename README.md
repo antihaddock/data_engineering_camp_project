@@ -9,14 +9,16 @@ This project utilises the research payments data subset of the CMS Open Payments
 
 ***"Open Payments is a national disclosure program created by the Affordable Care Act (ACA) and managed by Centers for Medicare & Medicaid Services (CMS). The purpose of the program is to promote transparency into the financial relationships between pharmaceutical and medical device industries, and physicians and teaching hospitals. The financial relationships may include consulting fees, research grants, travel reimbursements, and payments from industry to medical practitioners. "***
 
-I have used the research subset as this is a large dataset both in terms of the numbers of rows and columns and should require use of multiple tools explored during this course.
+I have used the research grants subset as this is a large dataset both in terms of the numbers of rows and columns and should require use of multiple tools explored during this course to ingest and visualise the data.
 
 **Aim of the problem**
 
 I will aim to answer the two following questions from this dataset:
-1. Which teaching hospitals recieve the most funding
+1. Which teaching hospitals recieve the most funding in this dataset in 2023
 2. Which specialities recieve the most funding
 3. What is the amount of funding provided across the calendar year(do some months get more funding then others?)
+
+We will aim to answer this in a Google Data Studio dashboard. (Link below).
 
 
 ## The Project
@@ -65,5 +67,11 @@ Cloning this repo locally and complete the following steps in order:
 6. move to the ``./dbt/data_engineering_project`` directory in the command line
 7. Run ``dbt run``
 
-Your datasets will now be ingested into a Google bucket, and big query.
+Your datasets will now be ingested into a Google Bucket, and BigQuery.
 
+## Dashboard located on Google Studio ##
+
+The dashboard required as the final part of this project can be found on Google studio at the following link https://lookerstudio.google.com/reporting/40757c9e-ac49-482d-9a08-97d11a128711
+This dashboard shows two tiles
+1. A categorical breakdwon of total research grants in 2013 by teaching hospital
+2. A line chart of total research grants paid by month between August and December 2013.
