@@ -7,7 +7,7 @@ from prefect_gcp import GcpCredentials
 
 @task(retries=3)
 def extract_from_gcs() -> Path:
-    """Download data from GCS"""
+    """Download data from GCS to facilitate uploading into BigQuery"""
     gcs_path = "data/research_payments.csv"
     gcs_block = GcsBucket.load("engineering-camp")
     local_path = './data_engineering_camp_project/'
@@ -18,7 +18,7 @@ def extract_from_gcs() -> Path:
 
 @task(log_prints=True)
 def write_to_bq(df: pd.DataFrame) -> None:
-    """Write DataFrame to BigQuery"""
+    """Writes a DataFrame to BigQuery"""
     gcp_credentials_block = GcpCredentials.load("data-engineering-creds")
     df.to_gbq(
         destination_table = "healthcare_payments_raw.ingest",

@@ -6,7 +6,7 @@ models:
     description: applying transformations to data to make this dataset clean and useable
   
   - name: funding_by_entity
-    description: A table which groups and sums funding amounts by the teaching hospital the research is completed at
+    description: A table which groups and sums funding amounts by the teaching hospital the research is completed at.
 
   - name: Principal_investigator_speciality
     description: A table which groups and sums funding amounts by the speciality of the researcher.
