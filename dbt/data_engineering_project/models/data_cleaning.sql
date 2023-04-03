@@ -1,5 +1,12 @@
 
-{{ config(materialized='table') }}
+{{ config(materialized='table',
+          cluster_by = "Teaching_Hospital_Name",
+          partition_by={
+            "field": "Date_of_Payment",
+            "data_type": "DATETIME_TRUNC",
+            "granularity": "day"
+       }
+) }}
 
 select
     Change_Type

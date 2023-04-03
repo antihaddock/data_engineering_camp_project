@@ -1,4 +1,5 @@
-{{ config(materialized='table') }}
+{{ config(materialized='table',
+cluster_by="Physician_Primary_Type") }}
 
 select
 Physician_Primary_Type
