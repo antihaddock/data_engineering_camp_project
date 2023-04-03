@@ -50,6 +50,12 @@ I am  apply the a multi layer data warehouse architecture, this would normally t
 
 We apply optimisation in the form of partitioning and clustering in  healthcare_payments_transformed. This is done inside dbt config file ``dbt_project.yml``
 
+## Clustering and Partitioning of tables in BigQuery ##
+BigQuery tables are clustered and partitioned in the config blocks of each ``.sql`` file in dbt consistent with these docs https://docs.getdbt.com/reference/resource-configs/bigquery-configs#clustering-clause . 
+
+I have applied clustering and partitioning to the ``data_cleaning`` table due to its size and presence of timestamp data along with multiple string data columns. ``fuding_by_entity`` and ``principal_investigator_speciality`` have been clustered by the strings that will be used for grouping in these tables. 
+
+
 ## How to reproduce this Project ##
 
 You will need to have a GCP account, gcloud cli installed and your credentials stored localling are a environmental variable. Installing ``gcloud`` cli can be achieved following these instructions https://cloud.google.com/sdk/docs/install
